@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6946259702223102710, guid: 2f6a3d3270d65411bb954ea63aba2d84, type: 3}
       propertyPath: m_Name
-      value: ElderlyMale
+      value: PirateFemale
       objectReference: {fileID: 0}
     - target: {fileID: 6947657289696237090, guid: 2f6a3d3270d65411bb954ea63aba2d84, type: 3}
       propertyPath: m_RootOrder

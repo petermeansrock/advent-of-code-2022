@@ -106,7 +106,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1111790002351400, guid: 76b6595faecb2ed49ae5b4dd4fe1a5af, type: 3}
       propertyPath: m_Name
-      value: ElfPushingBarrel
+      value: ElderlyMale
       objectReference: {fileID: 0}
     - target: {fileID: 4195947257436668, guid: 76b6595faecb2ed49ae5b4dd4fe1a5af, type: 3}
       propertyPath: m_RootOrder
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faefdef80978449d2a2a7f3211cc2dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 0.75
+  velocity: 2
 --- !u!4 &6947657289696237090 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4195947257436668, guid: 76b6595faecb2ed49ae5b4dd4fe1a5af, type: 3}

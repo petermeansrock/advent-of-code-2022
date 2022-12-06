@@ -439,6 +439,64 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a0695e531fc85f4fa3795eec1fef0bc, type: 3}
+--- !u!1 &1123610970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1123610971}
+  - component: {fileID: 1123610972}
+  m_Layer: 0
+  m_Name: Solver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1123610971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123610970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.6780303, y: 2.123717, z: -1.4184492}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1123610972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123610970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f8061998c424149a6dcd3567e30ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 4900000, guid: cf29c0f27512947a8996492b312018fb, type: 3}
+  elfPrefabs:
+  - {fileID: 6946259702223102710, guid: 2f6a3d3270d65411bb954ea63aba2d84, type: 3}
+  - {fileID: 4298768044387039053, guid: 350c8374a28c34029b3cbc8b40f8cccb, type: 3}
+  - {fileID: 2785268435239067923, guid: 830700a0471f0427b81881d83f24ecf0, type: 3}
+  - {fileID: 7370559914108661544, guid: 4df00367c4a6248dabe59d13ed28dea0, type: 3}
+  - {fileID: 8395814092552851236, guid: 6329392fb548c4576a6624a6115c1971, type: 3}
+  - {fileID: 4715669187633820323, guid: d6bfe02b9fabd4dbcbd75ea5756688b4, type: 3}
+  foodPrefabs:
+  - {fileID: 3019857944842957127, guid: 0af33875c482f4726ad2fbc47a4c38a7, type: 3}
+  - {fileID: 5893342812959968453, guid: c429685928bb443eaa963a0053c36985, type: 3}
+  - {fileID: 5475916670406664433, guid: 7e4d6982a8eeb4527b46ccb335b3a505, type: 3}
+  - {fileID: 1976323382520929333, guid: a4448cf6e6e024123b7c30b2bb1288a6, type: 3}
+  - {fileID: 8394413722886274997, guid: 49a623d7306e44c0bbd14b5db9553f6b, type: 3}
 --- !u!4 &1182904701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4663623752076018, guid: 33ab5149d67e8c3498714d3b695ba28b, type: 3}
