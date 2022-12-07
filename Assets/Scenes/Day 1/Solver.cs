@@ -17,6 +17,7 @@ public class Solver : MonoBehaviour {
     private TextMeshProUGUI calorieCounter;
 
     private int maxCalories = 0;
+    private List<int> calorieCounts = new();
 
     void Start() {
         // Parse input file and build list of elves
@@ -64,7 +65,7 @@ public class Solver : MonoBehaviour {
 
         foreach (int calories in elf.CalorieList) {
             // Pause between spawns
-            yield return new WaitForSeconds(0.75f);
+            yield return new WaitForSeconds(0.25f);
 
             // Spawn food in the air above the elf's barrel
             var elfPosition = gameObject.transform.position;
@@ -79,9 +80,16 @@ public class Solver : MonoBehaviour {
             totalCalorieCount += calories;
             if (totalCalorieCount > maxCalories) {
                 maxCalories = totalCalorieCount;
-                calorieCounter.text = $"Max Calories: {maxCalories}";
             }
         }
+
+        calorieCounts.Add(totalCalorieCount);
+        var ordered = calorieCounts.OrderByDescending(i => i).ToList();
+        var first = ordered.First();
+        var second = ordered.Skip(1).FirstOrDefault();
+        var third = ordered.Skip(2).FirstOrDefault();
+        var total = first + second + third;
+        calorieCounter.text = $"1st: {first}\n2nd: {second}\n3rd: {third}\nTotal: {total}";
 
         yield return new WaitForSeconds(20.0f);
         Destroy(gameObject);
