@@ -44,7 +44,7 @@ public class Solver : MonoBehaviour {
     private IEnumerator SpawnElves(List<Elf> elves) {
         foreach (Elf elf in elves) {
             // Pause between spawns
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1.5f);
 
             // Spawn elf at random location
             var x = -18.0f;
@@ -64,11 +64,11 @@ public class Solver : MonoBehaviour {
 
         foreach (int calories in elf.CalorieList) {
             // Pause between spawns
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(0.75f);
 
             // Spawn food in the air above the elf's barrel
             var elfPosition = gameObject.transform.position;
-            var x = elfPosition.x + 7.5f;
+            var x = elfPosition.x + 12f;
             var y = 33.0f;
             var z = elfPosition.z;
             var foodIndex = Random.Range(0, foodPrefabs.Length);
