@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text.RegularExpressions;
+using TMPro;
 using UnityEngine;
 
 public class Solver : MonoBehaviour {
@@ -12,6 +13,10 @@ public class Solver : MonoBehaviour {
     private GameObject[] elfPrefabs;
     [SerializeField]
     private GameObject[] foodPrefabs;
+    [SerializeField]
+    private TextMeshProUGUI calorieCounter;
+
+    private int maxCalories = 0;
 
     void Start() {
         // Parse input file and build list of elves
@@ -59,7 +64,7 @@ public class Solver : MonoBehaviour {
 
         foreach (int calories in elf.CalorieList) {
             // Pause between spawns
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1.5f);
 
             // Spawn food in the air above the elf's barrel
             var elfPosition = gameObject.transform.position;
@@ -72,7 +77,14 @@ public class Solver : MonoBehaviour {
 
             // Update calorie count for this elf
             totalCalorieCount += calories;
+            if (totalCalorieCount > maxCalories) {
+                maxCalories = totalCalorieCount;
+                calorieCounter.text = $"Max Calories: {maxCalories}";
+            }
         }
+
+        yield return new WaitForSeconds(20.0f);
+        Destroy(gameObject);
     }
 
     private class Elf {
