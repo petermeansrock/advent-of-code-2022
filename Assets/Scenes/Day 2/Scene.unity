@@ -1394,12 +1394,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a367ff37b007431596f11543405e28d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 4900000, guid: 7ceac46da7a734807bc3ba2811ad2764, type: 3}
+  input: {fileID: 4900000, guid: 4c139230500a549249fc119783b5b7d5, type: 3}
   player: {fileID: 1408470162}
   elf: {fileID: 1936082978}
   scoreText: {fileID: 282981139}
   roundText: {fileID: 1252762494}
   winnerText: {fileID: 835584738}
+  inputMode: 1
 --- !u!4 &1578541293
 Transform:
   m_ObjectHideFlags: 0

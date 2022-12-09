@@ -53,6 +53,9 @@ public class Contestant : MonoBehaviour {
         Win,
         Lose,
         Draw,
+        X = Lose,
+        Y = Draw,
+        Z = Win,
     }
 }
 
@@ -87,5 +90,34 @@ public static class RoundResultExtensions {
             RoundResult.Draw => 3,
             _ => throw new InvalidOperationException($"{result} has no associated score"),
         };
+    }
+
+    public static DrawChoice From(this RoundResult result, DrawChoice opponent) {
+        if (result == RoundResult.Draw) {
+            return opponent;
+        }
+
+        switch (opponent) {
+            case DrawChoice.Rock:
+                if (result == RoundResult.Win) {
+                    return DrawChoice.Paper;
+                } else {
+                    return DrawChoice.Scissors;
+                }
+            case DrawChoice.Paper:
+                if (result == RoundResult.Win) {
+                    return DrawChoice.Scissors;
+                } else {
+                    return DrawChoice.Rock;
+                }
+            case DrawChoice.Scissors:
+                if (result == RoundResult.Win) {
+                    return DrawChoice.Rock;
+                } else {
+                    return DrawChoice.Paper;
+                }
+            default:
+                throw new InvalidOperationException($"No valid choice to play against opponent");
+        }
     }
 }
